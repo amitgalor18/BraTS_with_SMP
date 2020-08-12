@@ -4,17 +4,22 @@ Tumor segmentation using pytorch and pipeline tools from the smp library.
 This code was written as an educational project for the course Deep Learning for Medical Images. 
 The data was contributed by the BraTS 2019 challenge: http://braintumorsegmentation.org/ and the pipeline was based on the SMP library https://github.com/qubvel/segmentation_models.pytorch. The ideas, inspiration and comparison were all with the help of the reference list at the bottom.
 
-The BraTS dataset comes in an archive of folders with nii.gz files. This pipeline assumes that the data is extracted, in folders for each scan and divided to image slices. The paths for the images are in the pickle files.
-The Project_Main_Pipeline notebook should be executed in order with a few caveats:
-In the "Choose Network Parameters" cell, if you don't have the first pre-trained model saved in the drive, you should change the "false" to "true". after that, the model can be loaded instead of downloaded from the start.
-The "Train the Model" cell has a few choices: 
-  - Number of epochs
-  - Batch size
-  - The learning rate is defined in the cell above, together with the optimizer type and activation
-  - Whether or not to start training from an existing checkpoint (if so, changing the addCounter to the current checkpoint number is recommended)
-  - Whether or not to use cross-validation (if NOT, then the batch size is defined in the cell above, together with creating train/val dataloaders)
 
-Each cell had documentation to explain it's purpose
+The BraTS dataset comes in an archive of folders with nii.gz files. This pipeline assumes that the data is extracted, in folders for each scan and divided to image slices. The paths for the images are in the pickle files.
+In order to get most of the MRI image, 3 of the different MRI modes (T1c, T2 and flair) were concatenated in 3 channels to make the image fit in the dimensions of an RGB image.
+An example to the resulting image, the ground truth mask and the predicted segmented image:
+
+
+The Project_Main_Pipeline notebook should be executed in order with a few caveats:
+- In the "Choose Network Parameters" cell, if you don't have the first pre-trained model saved in the drive, you should change the "false" to "true". after that, the model can be loaded instead of downloaded from the start.
+- The "Train the Model" cell has a few choices: 
+    - Number of epochs
+    - Batch size
+    - The learning rate is defined in the cell above, together with the optimizer type and activation
+    - Whether or not to start training from an existing checkpoint (if so, changing the addCounter to the current checkpoint number is recommended)
+    - Whether or not to use cross-validation (if NOT, then the batch size is defined in the cell above, together with creating train/val dataloaders)
+
+Each cell had documentation to explain it's purpose.
 
 for any questions we're available at amitgalor@mail.tau.ac.il and doron1336@gmail.com
 
