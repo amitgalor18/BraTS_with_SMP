@@ -1,0 +1,2 @@
+The data folder should contain all the MRI images, already extracted. They could be divided to different folders for each scan, as long as the pickle file has all the paths.
+It is recommended that the images will be a concatenation of 3 MRI modes (e.g. T1c, T2, flair) to avoid dimension errors while running the code.
