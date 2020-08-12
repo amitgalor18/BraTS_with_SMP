@@ -8,7 +8,7 @@ The data was contributed by the BraTS 2019 challenge: http://braintumorsegmentat
 The BraTS dataset comes in an archive of folders with nii.gz files. This pipeline assumes that the data is extracted, in folders for each scan and divided to image slices. The paths for the images are in the pickle files.
 In order to get most of the MRI image, 3 of the different MRI modes (T1c, T2 and flair) were concatenated in 3 channels to make the image fit in the dimensions of an RGB image.
 An example to the resulting image, the ground truth mask and the predicted segmented image:
-
+![example image](/example_image_59.PNG)
 
 The Project_Main_Pipeline notebook should be executed in order with a few caveats:
 - In the "Choose Network Parameters" cell, if you don't have the first pre-trained model saved in the drive, you should change the "false" to "true". after that, the model can be loaded instead of downloaded from the start.
