@@ -19,9 +19,17 @@ The Project_Main_Pipeline notebook should be executed in order with a few caveat
     - Whether or not to start training from an existing checkpoint (if so, changing the addCounter to the current checkpoint number is recommended)
     - Whether or not to use cross-validation (if NOT, then the batch size is defined in the cell above, together with creating train/val dataloaders)
 
-Each cell had documentation to explain it's purpose.
+Each cell has documentation to explain it's purpose.
 
-for any questions we're available at amitgalor@mail.tau.ac.il and doron1336@gmail.com
+Our trained models can be found at: https://drive.google.com/drive/folders/19WIXhbhj_KB-Ub6vcvSrpxjLajZhhsIF?usp=sharing
+
+The 3-channel dataset can be found at:
+ 
+HGG: https://drive.google.com/drive/folders/1OpVgtILay0e-B0hxSIc3oJwIQFXw-vB3?usp=sharing
+
+LGG: https://drive.google.com/drive/folders/1LQst8g-Au5Cqxf8C0uKQrR85eZIPzaeu?usp=sharing
+
+For any questions we're available at amitgalor@mail.tau.ac.il and doron1336@gmail.com
 
 
 References:
