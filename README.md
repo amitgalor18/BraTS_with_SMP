@@ -10,7 +10,8 @@ In order to get most of the MRI image, 3 of the different MRI modes (T1c, T2 and
 An example to the resulting image, the ground truth mask and the predicted segmented image:
 ![example image](/example_image_59.PNG)
 
-The Project_Main_Pipeline notebook should be executed in order with a few caveats:
+The Project_Main_Pipeline notebook is our main code, which we wrote with google colab. The rest of the important code is in "utils" folder.
+The notebook should be executed in order with a few caveats:
 - In the "Choose Network Parameters" cell, if you don't have the first pre-trained model saved in the drive, you should change the "false" to "true". after that, the model can be loaded instead of downloaded from the start.
 - The "Train the Model" cell has a few choices: 
     - Number of epochs
@@ -28,6 +29,17 @@ The 3-channel dataset can be found at:
 HGG: https://drive.google.com/drive/folders/1OpVgtILay0e-B0hxSIc3oJwIQFXw-vB3?usp=sharing
 
 LGG: https://drive.google.com/drive/folders/1LQst8g-Au5Cqxf8C0uKQrR85eZIPzaeu?usp=sharing
+
+Our final results for binary segmentation (complete tumor):
+Model	|Mean Dice score	|Median Dice Score	|25th Quantile Dice	|75th Quantile Dice	|Mean IoU score	|Train time (per epoch)	|Test time
+--------|------|------|-------|--------|--------|-------|--------
+Unet	|93.1	|95.1	|90.1	|96.6	|87.4	|6:30 min	|37 sec
+Linknet	|92.9	|95.3	|90.9	|96.7	|87.2	|1:37 min	|31 sec
+PSPNet	|91.3	|93.7	|88.1	|95.1	|84.4	|5:00 min	|31 sec
+DeepLabv3	|92.3	|94.5	|89.3	|95.9	|86.1	|13:16 min	|33 sec
+
+![final results](/final_results_visualization.PNG)
+
 
 For any questions we're available at amitgalor@mail.tau.ac.il and doron1336@gmail.com
 
