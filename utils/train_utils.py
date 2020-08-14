@@ -77,10 +77,7 @@ class Epoch:
                 if self.verbose:
                     s = self._format_logs(logs)
                     iterator.set_postfix_str(s)
-        #metrics_logs.update({'iou_median': np.median(metric_values[:, 0])})
-        #metrics_logs.update({'iou_25th': np.quantile(metric_values[:, 0], q=0.25)})
-        #metrics_logs.update({'iou_75th': np.quantile(metric_values[:, 0], q=0.75)})
-        print(metric_values)
+
         metrics_logs.update({'fscore_median': np.median(metric_values)})
         metrics_logs.update({'fscore_25th': np.quantile(metric_values, q=0.25)})
         metrics_logs.update({'fscore_75th': np.quantile(metric_values, q=0.75)})

@@ -34,19 +34,6 @@ class Dataset(BaseDataset):
         self.images_fps = images_dir
         self.masks_fps = masks_dir
 
-        # if hasTestSet:
-        #  self.ids2 = os.listdir(masks_dir)
-        #  self.masks_fps = [os.path.join(masks_dir, image_id) for image_id in self.ids2]
-        # else:
-        #  self.masks_fps = [os.path.join(masks_dir, image_id) for image_id in self.ids]
-
-        # self.class_values = [self.CLASSES.index(cls.lower()) for cls in classes]
-        # self.class_values = self.calsses_indexes
-
-        # convert str names to class values on masks
-        #self.class_values = [self.CLASSES.index(cls.lower()) for cls in classes]
-        # self.class_values = self.calsses_indexes
-
         self.augmentation = augmentation
         self.preprocessing = preprocessing
 

@@ -12,15 +12,6 @@ def get_training_augmentation():
         albu.IAAAffine(scale=1.0, translate_percent=None, translate_px=None, rotate=0.0, shear=0.2, order=1, cval=0, mode='reflect', always_apply=False, p=1),
         albu.PadIfNeeded(256, 256)
     ]
-
-    '''train_transform = [
-        albu.IAAAdditiveGaussianNoise(p=0.03),
-        albu.ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.1, rotate_limit=15, interpolation=2, border_mode=4,
-                              always_apply=False, p=0.6),
-        albu.RandomBrightnessContrast(brightness_limit=0.02, contrast_limit=0.02, always_apply=False, p=0.7),
-        albu.GridDistortion(num_steps=5, distort_limit=0.3, interpolation=1, border_mode=4, always_apply=False, p=0.1),
-        albu.ElasticTransform(sigma = 10, alpha_affine=10,approximate=True,p=0.5)
-    ]'''
     return albu.Compose(train_transform)
 
 
